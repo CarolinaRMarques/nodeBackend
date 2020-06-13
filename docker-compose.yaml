@@ -1,0 +1,10 @@
+﻿version: "3.8"
+services:
+  nodebackend:
+    build : ./node-backend
+    ports:
+      - "3000:3000"   
+  portainer : 
+    image : portainer/portainer
+    ports : 
+      - "9000:9000"
