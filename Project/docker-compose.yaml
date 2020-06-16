@@ -1,4 +1,4 @@
-﻿version: "3.8"
+﻿version: "3"
 services:
   nodebackend:
     build : ./node-backend
@@ -6,5 +6,12 @@ services:
       - "3000:3000"   
   portainer : 
     image : portainer/portainer
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainer_data:/data
     ports : 
-      - "9000:9000"
+      - "9001:9000"
+
+volumes : 
+  portainer_data:
+
