@@ -60,8 +60,8 @@ app.get("/paypal", (req, res) => {
             payment_method: "paypal"
         },
         redirect_urls: {
-            return_url: "http://10.0.3.2:3000/success",
-            cancel_url: "http://10.0.3.2:3000/cancel"
+            return_url: "http://192.168.160.31:3000/success",
+            cancel_url: "http://192.168.160.31:3000/cancel"
         },
         transactions: [
             {
